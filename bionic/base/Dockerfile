@@ -1,6 +1,4 @@
-ARG base
-
-FROM ${base}
+FROM ubuntu:bionic
 ARG jq_url=https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
 ARG yj_url=https://github.com/sclevine/yj/releases/download/v2.0/yj-linux
 ARG cnb_uid=1000
