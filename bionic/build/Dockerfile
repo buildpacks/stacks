@@ -9,6 +9,10 @@ RUN go get github.com/Azure/acr-docker-credential-helper/src/docker-credential-a
 
 FROM ${base_image}
 
+RUN apt-get update && \
+  apt-get install -y git && \
+  rm -rf /var/lib/apt/lists/*
+
 COPY --from=helpers /go/bin /usr/local/bin
 ARG stack_id="io.buildpacks.stacks.bionic"
 
