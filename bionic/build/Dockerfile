@@ -16,6 +16,6 @@ RUN apt-get update && \
 COPY --from=helpers /go/bin /usr/local/bin
 ARG stack_id="io.buildpacks.stacks.bionic"
 
-USER pack
+USER cnb
 LABEL io.buildpacks.stack.id=${stack_id}
-ENV PACK_STACK_ID=${stack_id}
+ENV CNB_STACK_ID=${stack_id}
