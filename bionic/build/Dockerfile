@@ -1,5 +1,5 @@
 ARG base_image
-ARG go_version
+ARG go_version=1.12
 
 FROM golang:$go_version as helpers
 
