@@ -15,7 +15,7 @@ while getopts "v" o; do
   esac
 done
 
-docker pull ubunutu:bionic
+docker pull ubuntu:bionic
 
 scripts_dir=$(cd $(dirname $0) && pwd)
 dir=${scripts_dir}/../bionic
