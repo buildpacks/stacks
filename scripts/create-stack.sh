@@ -20,9 +20,9 @@ docker pull ubunutu:bionic
 scripts_dir=$(cd $(dirname $0) && pwd)
 dir=${scripts_dir}/../bionic
 
-base_image=packs/base:${version}
-run_image=packs/run:${version}
-build_image=packs/build:${version}
+base_image=cnbs/base:${version}
+run_image=cnbs/run:${version}
+build_image=cnbs/build:${version}
 docker build -t "${base_image}" "$dir/base"
 docker build --build-arg "base_image=${base_image}" -t "${build_image}"  "$dir/build"
 docker build --build-arg "base_image=${base_image}" -t "${run_image}" "$dir/run"

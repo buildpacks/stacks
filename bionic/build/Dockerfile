@@ -1,7 +1,7 @@
 ARG base_image
-ARG go_version
+ARG go_version=latest
 
-FROM golang:$go_version as helpers
+FROM golang:${go_version} as helpers
 
 RUN go get github.com/GoogleCloudPlatform/docker-credential-gcr
 RUN go get github.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-credential-ecr-login
